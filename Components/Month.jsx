@@ -1,17 +1,23 @@
 import React from 'react';
-import Date from './Date.jsx'
+import Day from './Day.jsx'
 
 
 class Month extends React.Component {
 
   
     render() {
+       
+
+
+
         let calendarDataModelCode = this.props.calendarDataModel.map( (v,i) =>  {
             return(
               <tr key={i}>
                     {
                       v.map( (d,i) => {
-                        return <Date key={i} date={d===null? null : d.getDate()}/>
+                          let dateStatusForDay= this.props.dateStatusForMonth.filter(v=> d!==null && new Date(2021, 0, v.id).getDate()===d.getDate())
+                          
+                          return <Day dateStatusForDay={dateStatusForDay[0]} key={i} date={d===null? null : d.getDate()} />
                       })
                     }
               </tr>
@@ -19,8 +25,8 @@ class Month extends React.Component {
          })
 
       return(
-          <div>
-             <div>{this.props.monthName}</div>
+          <div className='month'>
+             <div className='header'>{this.props.monthName} {this.props.monthYear}</div>
                 <table>
                     <thead>
                         <tr>

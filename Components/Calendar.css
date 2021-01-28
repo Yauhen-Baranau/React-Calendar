@@ -1,6 +1,30 @@
 .app {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
+}
+
+.tententive {
+    background-color: rgb(175, 255, 71);
+    width: 40px;
+}
+.busy {
+    background-color:red;
+    width: 40px;
+}
+
+.free{
+    background-color: green;
+    width: 40px;
+}
+
+.header {
+    border-bottom: solid black 2px;
+    border-top: solid black 2px;
+
+}
+
+.month {
+    margin: 10px;
 }
