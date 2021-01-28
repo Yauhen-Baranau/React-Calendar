@@ -1,22 +1,27 @@
-.app {
+.calendar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+  
     padding: 20px;
 }
 
 .tententive {
     background-color: rgb(175, 255, 71);
-    width: 40px;
+   
 }
 .busy {
     background-color:red;
-    width: 40px;
+   
 }
 
 .free{
     background-color: green;
-    width: 40px;
+    
+}
+.free,.busy,.tententive {
+  text-align: center;
+    width: 70px;
 }
 
 .header {
